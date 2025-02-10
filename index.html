@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,25 +10,27 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap"
+        rel="stylesheet" />
     <title>Card War</title>
-  </head>
-  <body>
+</head>
+
+<body>
     <button id="shuffle-deck-btn" class="shuffle-deck-btn">Shuffle deck</button>
+
     <p class="text-white remaining-cards">
-      Remaining cards:<span id="remaining-cards">52</span>
+        Remaining cards:<span id="remaining-cards">52</span>
     </p>
-    <p class="text-white war-text">War!</p>
+    <p id="win-message" class="text-white win-text">War!</p>
     <p class="text-white score">Computer: <span id="computer-score">0</span></p>
 
     <div id="cards" class="cards">
-      <div id="computer-card-img" class="card"></div>
-      <div id="player-card-img" class="card"></div>
+        <div id="computer-card-img" class="card"></div>
+        <div id="player-card-img" class="card"></div>
     </div>
     <p class="text-white score">Me: <span id="player-score">0</span></p>
     <button id="draw-btn" class="draw-btn">Draw</button>
     <script src="./index.js"></script>
-  </body>
+</body>
+
 </html>
