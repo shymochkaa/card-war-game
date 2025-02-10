@@ -1,42 +1,39 @@
 body {
-    background: url("../img/table.png");
-    background-size: cover;
-    margin: 0;
-    font-family: "Crimson Text", serif;
-    font-weight: 600;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    height: 100vh;
+  background: url("../img/table.png");
+  background-size: cover;
+  margin: 0;
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  height: 100vh;
 }
 
 .shuffle-deck-btn,
 .draw-btn {
-    border: none;
-    background: #F7F150;
-    color: #141305;
-    font-size: 1.5rem;
-    font-family: "Crimson Text", serif;
-    font-weight: 600;
+  border: none;
+  background: #f7f150;
+  color: #141305;
+  font-size: 1.5rem;
+  font-family: "Crimson Text", serif;
+  font-weight: 600;
 }
 
 .shuffle-deck-btn {
-    padding: 0.5em 0.5em 0.5em 1em;
-
+  padding: 0.5em 0.5em 0.5em 1em;
 }
 
 .shuffle-deck-btn:active,
 .draw-btn:active {
-    transform: translateY(2px);
+  transform: translateY(2px);
 }
 
 .draw-btn {
-    
-    width: 100%;
-    padding: 1em;
-
+  width: 100%;
+  padding: 1em;
 }
 
 .cards {
@@ -46,31 +43,30 @@ body {
 }
 
 .card img {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
-
 
 .card {
-    width: 100px;
-    height: 140px;
-    border: 1px solid black;
-    border-radius: 9px;
+  width: 100px;
+  height: 140px;
+  border: 1px solid black;
+  border-radius: 9px;
 }
 .text-white {
-    color: #FFFFFF;
+  color: #ffffff;
 }
 
 .score {
-    font-size: 2rem;
-    margin: 0.5em;
+  font-size: 2rem;
+  margin: 0.5em;
 }
 
 .remaining-cards {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .war-text {
-    font-size: 2.5rem;
-    margin: 1vh;
+  font-size: 2.5rem;
+  margin: 1vh;
 }
