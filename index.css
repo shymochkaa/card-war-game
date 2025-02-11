@@ -8,7 +8,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    cursor: pointer;
     height: 100vh;
 }
 
@@ -20,6 +19,7 @@ body {
     font-size: 1.5rem;
     font-family: "Crimson Text", serif;
     font-weight: 600;
+    cursor: pointer;
 }
 
 .shuffle-deck-btn {
@@ -28,7 +28,7 @@ body {
 
 .shuffle-deck-btn:active,
 .draw-btn:active {
-    transform: translateY(2px);
+    transform: translateY(-2px);
 }
 
 .draw-btn {
@@ -70,4 +70,9 @@ body {
 .win-text {
     font-size: 2.5rem;
     margin: 1vh;
+}
+
+.inactive-btn {
+    pointer-events: none;
+    background-color: #ADA94D;
 }

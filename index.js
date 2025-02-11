@@ -4,6 +4,12 @@ const drawBtn = document.getElementById("draw-btn");
 const computerCardImg = document.getElementById("computer-card-img");
 const playerCardImg = document.getElementById("player-card-img");
 const winMessage = document.getElementById("win-message");
+const remainingCards = document.getElementById("remaining-cards")
+remainingCards.textContent = 52
+
+drawBtn.classList.add('inactive-btn')
+// drawBtn.style.pointerEvents = 'none'
+// drawBtn.style.backgroundColor = '#ADA94D'
 
 const cardConverter = (card) => {
   const valueMap = {
@@ -38,17 +44,34 @@ function handleClick() {
     .then((res) => res.json())
     .then((data) => {
       deckId = data.deck_id;
+      remainingCards.textContent = data.remaining;
+    //   drawBtn.style.pointerEvents = 'auto'
+    //   drawBtn.style.backgroundColor = '#f7f150'
+    drawBtn.classList.remove('inactive-btn')
     });
 }
 
 shuffleDeckBtn.addEventListener("click", handleClick);
 
 drawBtn.addEventListener("click", () => {
+    
   fetch(`https://apis.scrimba.com/deckofcards/api/deck/${deckId}/draw/?count=2`)
     .then((res) => res.json())
     .then((data) => {
-      computerCardImg.innerHTML = `<img src=${data.cards[0].image} />`;
-      playerCardImg.innerHTML = `<img src=${data.cards[1].image} />`;
-      cardWinner(data.cards[0], data.cards[1]);
+        remainingCards.textContent = data.remaining;
+        
+        if(data.remaining > 0) {
+            computerCardImg.innerHTML = `<img src=${data.cards[0].image} />`;
+            playerCardImg.innerHTML = `<img src=${data.cards[1].image} />`;
+            cardWinner(data.cards[0], data.cards[1]);
+            remainingCards.textContent = data.remaining;
+        } else {
+            // drawBtn.style.pointerEvents = 'none'
+            // drawBtn.style.backgroundColor = '#ADA94D'
+            drawBtn.classList.add('inactive-btn')
+        }
+      
     });
 });
+
+
